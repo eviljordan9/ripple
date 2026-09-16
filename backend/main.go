@@ -35,7 +35,7 @@ func main() {
 	}
 
 	authSvc := auth.New(cfg.JWTSecret, cfg.CookieName, cfg.SecureCookie)
-	engine := httpapi.New(authSvc, svc, live, mongo)
+	engine := httpapi.New(authSvc, svc, live, mongo, cfg.StaticDir)
 
 	srv := &http.Server{Addr: cfg.HTTPAddr, Handler: engine}
 	go func() {
