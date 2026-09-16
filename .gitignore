@@ -1,0 +1,6 @@
+node_modules/
+.vendor/
+.data/
+frontend/dist
+*.log
+.DS_Store
